@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/general">
+
+        <SwitchPreference
+            android:title="@string/dark_mode"
+            android:key="dark_mode" />
+
+        <SwitchPreference
+            android:title="@string/hide_welcome_screen"
+            android:key="hide_welcome_screen" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/quick_settings"
+        android:key="quick_settings">
+
+        <ListPreference
+            android:key="clock_format"
+            android:title="@string/clock_tile_format"
+            android:entryValues="@array/clock_format_values"
+            android:entries="@array/clock_format_names"
+            android:defaultValue="twelve" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/safe_mode" >
+
+        <SwitchPreference
+            android:title="@string/show_notif"
+            android:key="show_safe_mode_notif"
+            android:defaultValue="true"
+            android:summary="@string/safe_mode_notif_desc" />
+
+        <SwitchPreference
+            android:title="@string/enable"
+            android:key="safe_mode"
+            android:summary="@string/safe_mode_summary"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_status_bar"
+            android:title="@string/safe_mode_status_bar"
+            android:summary="@string/safe_mode_summary_1"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_fancy_anim"
+            android:title="@string/safe_mode_fancy_anim"
+            android:summary="@string/safe_mode_summary_2"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_header_count"
+            android:title="@string/safe_mode_header_count"
+            android:summary="@string/safe_mode_summary_3"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_row_col"
+            android:title="@string/safe_mode_row_col_tw"
+            android:summary="@string/safe_mode_summary_4"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_snooze_options"
+            android:title="@string/safe_mode_snooze_options"
+            android:summary="@string/safe_mode_summary_5"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_high_brightness_warning"
+            android:title="@string/high_brightness_warning"
+            android:summary="@string/safe_mode_high_brightness_warning_desc"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="safe_mode"
+            android:key="safe_mode_volume_warning"
+            android:title="@string/headphone_volume_warning"
+            android:summary="@string/safe_mode_volume_warning_desc"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/danger_zone">
+
+        <SwitchPreference
+            android:title="@string/enable_custom_settings_input"
+            android:key="allow_custom_settings_input" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
